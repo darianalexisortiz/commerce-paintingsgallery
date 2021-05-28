@@ -5,6 +5,8 @@ dependencies:
   config:
     - commerce_product.commerce_product_variation_type.default
     - field.field.commerce_product_variation.default.field_images
+    - image.style.large
+    - image.style.thumbnail
   module:
     - blazy
     - commerce_order
@@ -17,25 +19,27 @@ content:
     weight: 1
     label: hidden
     settings:
+      image_style: large
       responsive_image_style: ''
+      media_switch: ''
+      thumbnail_style: thumbnail
+      ratio: ''
+      current_view_mode: default
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
       icon: ''
       layout: ''
       view_mode: ''
       cache: 0
-      current_view_mode: ''
       skin: ''
       fx: ''
       style: ''
-      background: false
       box_caption: ''
       box_caption_custom: ''
       box_media_style: ''
-      caption: {  }
       box_style: ''
-      image_style: ''
-      media_switch: ''
-      ratio: ''
-      thumbnail_style: ''
       _uri: ''
       breakpoints: {  }
       sizes: ''

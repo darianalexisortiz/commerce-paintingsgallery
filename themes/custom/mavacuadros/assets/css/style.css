@@ -307,7 +307,7 @@ body.toolbar-fixed.toolbar-tray-open .cart-offcanvas {
 }
 
 @media screen and (min-width: 768px) {
-  .product-img--main {
+  .modal-body .product-img--main {
     min-height: 10px;
     height: 700px;
   }

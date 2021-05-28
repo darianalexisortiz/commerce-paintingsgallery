@@ -1,0 +1,9 @@
+site_key: 6Lfuav0ZAAAAACzPwQTbm5qiM25LxVDOOs6hVCAl
+secret_key: 6Lfuav0ZAAAAAJNxl4TR6pTE2CzA_aLi_LqmpNHS
+verify_hostname: true
+default_challenge: recaptcha/reCAPTCHA
+error_message: 'Falló la verificación de Antibot.'
+cacheable: false
+_core:
+  default_config_hash: jv0PKCJEOq2bOwY9RspuPZCf67ifVJ4tfTk-BfZMw8k
+langcode: es
