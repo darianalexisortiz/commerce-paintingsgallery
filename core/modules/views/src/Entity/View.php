@@ -478,6 +478,9 @@ class View extends ConfigEntityBase implements ViewEntityInterface {
   public function mergeDefaultDisplaysOptions() {
     $displays = [];
     foreach ($this->get('display') as $key => $options) {
+      if (empty($options)) {
+        continue;
+      }
       $options += [
         'display_options' => [],
         'display_plugin' => NULL,

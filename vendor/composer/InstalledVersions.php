@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '96da74a252384809da508481ddfdd55b62d595be',
+    'reference' => '5e6d8233f3ef8731aa6ae1305ac1ba635cf5ae16',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -208,6 +208,15 @@ private static $installed = array (
       array (
         0 => '^1.2',
       ),
+    ),
+    'cweagans/composer-patches' => 
+    array (
+      'pretty_version' => '1.7.0',
+      'version' => '1.7.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ae02121445ad75f4eaff800cc532b5e6233e2ddf',
     ),
     'dflydev/dot-access-configuration' => 
     array (
@@ -1365,7 +1374,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '96da74a252384809da508481ddfdd55b62d595be',
+      'reference' => '5e6d8233f3ef8731aa6ae1305ac1ba635cf5ae16',
     ),
     'drupal/libraries' => 
     array (

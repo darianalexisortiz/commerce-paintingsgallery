@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
         "drupal/address": "^1.9",
         "drupal/admin_toolbar": "^2.4",
         "drupal/ajax_loader": "^1.4",
@@ -103,6 +104,21 @@
         "sort-packages": true
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "2952261-11: Unsupported types": "https://www.drupal.org/files/issues/2019-10-22/unsupported-types-2952261-11.patch",
+                "3007424-108: Problem Views product": "https://www.drupal.org/files/issues/2020-09-03/3007424-108.patch"
+            }
+        },
+	    "merge-plugin": {
+            "include": [
+            	"web/modules/contrib/webform/composer.libraries.json"
+            ]
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "./"
