@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '01ed7e0f9c40a9edb9ffb67cc03f28eb118bdc95',
+    'reference' => '96da74a252384809da508481ddfdd55b62d595be',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -1365,7 +1365,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '01ed7e0f9c40a9edb9ffb67cc03f28eb118bdc95',
+      'reference' => '96da74a252384809da508481ddfdd55b62d595be',
     ),
     'drupal/libraries' => 
     array (

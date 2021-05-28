@@ -695,3 +695,7 @@ body.toolbar-fixed.toolbar-tray-open .cart-offcanvas {
   }
 }
 
+
+.modal-dialog .commerce-product--full .form-submit {
+  display: none !important;
+}
