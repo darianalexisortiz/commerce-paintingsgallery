@@ -1,0 +1,25 @@
+uuid: 9d1947c0-6864-4f7a-8027-ed842241ff8a
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:10556edd-538d-44b9-85c0-12a911b75086'
+  module:
+    - block_content
+  theme:
+    - mavacuadros
+id: btnwhatsapp
+theme: mavacuadros
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:10556edd-538d-44b9-85c0-12a911b75086'
+settings:
+  id: 'block_content:10556edd-538d-44b9-85c0-12a911b75086'
+  label: 'BTN Whatsapp'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

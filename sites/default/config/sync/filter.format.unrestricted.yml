@@ -1,0 +1,19 @@
+uuid: b5745ef4-ee0b-4374-b8fb-0e9250686b55
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+name: 'Sin restricciones'
+format: unrestricted
+weight: 0
+filters:
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }

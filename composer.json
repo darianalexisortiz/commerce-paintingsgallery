@@ -31,7 +31,10 @@
         "drupal/commerce_smart_importer": "^1.0@alpha",
         "drupal/console": "^1.9",
         "drupal/core": "^8.8.0",
-        "drupal/core-composer-scaffold": "^8.8.0",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-project-message": "^8.8",
+        "drupal/core-recommended": "^8.8",
+        "drupal/core-vendor-hardening": "^8.8",
         "drupal/core_views_facets": "^1.2",
         "drupal/currency": "^3.3",
         "drupal/devel": "^4.0",
@@ -51,6 +54,7 @@
         "drupal/imce": "^2.3",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/libraries": "^3.0@alpha",
+        "drupal/link_attributes": "^1.11",
         "drupal/magnific_popup": "^1.5",
         "drupal/mail_login": "^2.2",
         "drupal/mailsystem": "^4.3",
@@ -87,11 +91,7 @@
         "drush/drush": "^9.7.1 | ^10.0.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
-        "zaporylie/composer-drupal-optimizations": "^1.0",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8",
-        "drupal/core-vendor-hardening": "^8.8"
+        "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"
