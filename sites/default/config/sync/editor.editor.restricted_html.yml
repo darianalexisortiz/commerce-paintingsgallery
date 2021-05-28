@@ -1,0 +1,45 @@
+uuid: bb718df4-ba81-456b-9cbd-8c6db7f4de99
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - ckeditor
+format: restricted_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formato
+          items:
+            - Bold
+            - Strike
+            - Underline
+            - Italic
+            - RemoveFormat
+        -
+          name: Listas
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Tools
+          items:
+            - Undo
+            - Redo
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

@@ -1,0 +1,22 @@
+uuid: ca0607c2-d899-4301-9bdf-0ffd3efcf939
+langcode: es
+status: true
+dependencies:
+  theme:
+    - commerce_bootstrap
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: commerce_bootstrap_local_tasks
+theme: commerce_bootstrap
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

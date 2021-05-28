@@ -1,0 +1,8 @@
+uuid: da458122-6003-4e69-b941-0a68e724504c
+langcode: es
+status: true
+dependencies: {  }
+name: 'Denominación Cuadro'
+vid: frame_denomination
+description: ''
+weight: 0

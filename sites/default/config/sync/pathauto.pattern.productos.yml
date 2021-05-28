@@ -1,0 +1,23 @@
+uuid: a9d4cfea-9945-41da-babc-5ea7d3702c62
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: productos
+label: Productos
+type: 'canonical_entities:taxonomy_term'
+pattern: 'productos/[term:name]'
+selection_criteria:
+  c7ec00e0-2ee6-4d7b-961e-5f5f0e663788:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: c7ec00e0-2ee6-4d7b-961e-5f5f0e663788
+selection_logic: and
+weight: -5
+relationships: {  }

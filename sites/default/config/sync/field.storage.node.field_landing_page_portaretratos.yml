@@ -1,0 +1,20 @@
+uuid: 0b8ea2b0-7e39-4a75-81e3-e89f01c9eb65
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - node
+id: node.field_landing_page_portaretratos
+field_name: field_landing_page_portaretratos
+entity_type: node
+type: entity_reference
+settings:
+  target_type: commerce_product_variation
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

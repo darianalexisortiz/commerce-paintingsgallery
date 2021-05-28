@@ -1,0 +1,22 @@
+uuid: fae4d96c-84f3-47f7-b4b8-27c359485546
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mavacuadros
+_core:
+  default_config_hash: uxiZlSldLtoOp05pfXeKJxxtvB0ckxx3mAAabJdAJnU
+id: mavacuadros_messages
+theme: mavacuadros
+region: highlighted
+weight: -9
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

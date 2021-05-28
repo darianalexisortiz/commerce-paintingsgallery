@@ -1,0 +1,20 @@
+uuid: d38e2d5f-8efc-4fee-b353-0c8f1a6c846e
+langcode: es
+status: true
+dependencies:
+  theme:
+    - mavacuadros
+_core:
+  default_config_hash: EAlCAHiVy5x3aTOW2K9XaWE4kelyfSSSKv8_uiomGJM
+id: mavacuadros_local_actions
+theme: mavacuadros
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

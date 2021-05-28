@@ -1,0 +1,8 @@
+uuid: ac56219a-775e-4dc3-b183-1de579db9a67
+langcode: es
+status: true
+dependencies: {  }
+name: 'Categoria de cuadros'
+vid: frame_category
+description: ''
+weight: 0

@@ -1,0 +1,32 @@
+uuid: dc260354-db53-4aaf-88c3-331be07971a7
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Usuario autenticado'
+weight: 1
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'approve user accounts'
+  - 'assign administrator role'
+  - 'assign all roles'
+  - 'create user accounts'
+  - 'deactivate user accounts'
+  - 'delete files'
+  - 'manage own commerce_payment_method'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - userprotect.account.edit
+  - userprotect.mail.edit
+  - userprotect.pass.edit
+  - 'view commerce_product'
+  - 'view media'
+  - 'view own commerce_order'

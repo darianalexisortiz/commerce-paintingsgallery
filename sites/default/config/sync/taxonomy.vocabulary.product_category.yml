@@ -1,0 +1,8 @@
+uuid: 11c6bf8e-d173-4174-9504-5195e7204531
+langcode: es
+status: true
+dependencies: {  }
+name: 'Categoría de productos'
+vid: product_category
+description: ''
+weight: 0

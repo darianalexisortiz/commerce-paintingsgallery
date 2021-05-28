@@ -1,0 +1,33 @@
+uuid: d4f3595d-84f1-4ab6-8da6-9952171b049a
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - core.entity_view_mode.commerce_product.catalog
+    - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.field_product_category
+_core:
+  default_config_hash: 10qgl6V_HwkrJufzsNCV75OpqOeMzzKDJb3BhaogmzQ
+id: commerce_product.default.catalog
+targetEntityType: commerce_product
+bundle: default
+mode: catalog
+content:
+  title:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  field_product_category: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true
+  variations: true

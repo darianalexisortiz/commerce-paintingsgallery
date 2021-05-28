@@ -1,0 +1,20 @@
+uuid: 365199d7-d15a-4d05-96c7-97eb5c609105
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - taxonomy
+id: commerce_product_variation.field_generic_size
+field_name: field_generic_size
+entity_type: commerce_product_variation
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

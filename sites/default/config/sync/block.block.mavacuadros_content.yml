@@ -1,0 +1,22 @@
+uuid: 828a9600-7636-4b27-b338-b3945951e18e
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mavacuadros
+_core:
+  default_config_hash: XJkApTCnidVbNIe-SvLIX1pVPIiw5j_m0SWT-eYw39E
+id: mavacuadros_content
+theme: mavacuadros
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

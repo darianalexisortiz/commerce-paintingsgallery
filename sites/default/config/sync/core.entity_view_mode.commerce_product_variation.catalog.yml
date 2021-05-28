@@ -1,0 +1,10 @@
+uuid: ad8bb866-671f-4726-82e3-f3879faf0e45
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.catalog
+label: Catálogo
+targetEntityType: commerce_product_variation
+cache: true

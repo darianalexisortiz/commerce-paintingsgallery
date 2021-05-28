@@ -1,0 +1,14 @@
+uuid: d5ac6874-14fc-4da9-a286-32e874d128f1
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: producto
+label: Producto
+type: 'canonical_entities:commerce_product'
+pattern: 'producto/[commerce_product:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,29 @@
+uuid: 508630d7-b3b7-4e45-863b-12aadb232985
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.frame
+    - field.storage.commerce_product.field_product_category
+  content:
+    - 'taxonomy_term:product_category:84548d29-8fb4-4ead-8d90-102c9631cae8'
+id: commerce_product.frame.field_product_category
+field_name: field_product_category
+entity_type: commerce_product
+bundle: frame
+label: Categoría
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 84548d29-8fb4-4ead-8d90-102c9631cae8
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: products_categories_selection
+      display_name: frame_selection
+      arguments: {  }
+field_type: entity_reference

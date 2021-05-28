@@ -1,0 +1,8 @@
+uuid: 2b0d431a-df2a-467d-9885-aa4ff149708d
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tamaño general'
+vid: overall_size
+description: ''
+weight: 0

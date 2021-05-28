@@ -1,0 +1,29 @@
+uuid: 16be8d85-cd7b-4878-9024-f1660357d4f2
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.categorias
+  module:
+    - facets
+    - system
+  theme:
+    - mavacuadros
+id: categorias
+theme: mavacuadros
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'facet_block:categorias'
+settings:
+  id: 'facet_block:categorias'
+  label: Categorías
+  provider: facets
+  label_display: visible
+  block_id: categorias
+visibility:
+  request_path:
+    id: request_path
+    pages: "/productos\r\n/productos/*"
+    negate: false
+    context_mapping: {  }

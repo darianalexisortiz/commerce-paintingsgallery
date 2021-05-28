@@ -1,0 +1,22 @@
+uuid: 1aa1f988-658e-4ffe-a4f4-beb0e6f67e40
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - mavacuadros
+_core:
+  default_config_hash: gKtOcSQTQki2pujw1HB5crJu7WlQmuPbl9cMqPDeWtA
+id: mavacuadros_help
+theme: mavacuadros
+region: content
+weight: -9
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

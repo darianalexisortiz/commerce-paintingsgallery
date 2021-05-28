@@ -1,0 +1,11 @@
+uuid: 804e727c-91a0-4613-bbb4-8003bbd9da0b
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FGYrs0ZrjxSzRQMODyYqquV1UW5MN7S5wUG0Dp_OxWU
+id: online
+label: Conectado
+description: ''
+traits: {  }
+locked: false

@@ -1,0 +1,29 @@
+uuid: f9f3a61e-0433-4cdb-b7c7-dfc2ac5ed89f
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.categoria_de_cuadro
+  module:
+    - facets
+    - system
+  theme:
+    - mavacuadros
+id: lamina
+theme: mavacuadros
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'facet_block:categoria_de_cuadro'
+settings:
+  id: 'facet_block:categoria_de_cuadro'
+  label: Lamina
+  provider: facets
+  label_display: visible
+  block_id: lamina
+visibility:
+  request_path:
+    id: request_path
+    pages: "/productos\r\n/productos/*"
+    negate: false
+    context_mapping: {  }

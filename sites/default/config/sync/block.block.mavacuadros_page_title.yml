@@ -1,0 +1,27 @@
+uuid: 38f573bb-9156-4d3c-aa87-1219cb7728ed
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mavacuadros
+_core:
+  default_config_hash: mmcopYofUmb3PLb10rD6utbPoo6_zpxaX4yf3i4xmH8
+id: mavacuadros_page_title
+theme: mavacuadros
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/product/*\r\n/products*\r\n<front>"
+    negate: true
+    context_mapping: {  }

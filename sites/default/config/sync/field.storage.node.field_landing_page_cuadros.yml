@@ -1,0 +1,20 @@
+uuid: cb32b941-58d1-4979-922e-44556b530528
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - node
+id: node.field_landing_page_cuadros
+field_name: field_landing_page_cuadros
+entity_type: node
+type: entity_reference
+settings:
+  target_type: commerce_product_variation
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

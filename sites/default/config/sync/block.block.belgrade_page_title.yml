@@ -1,0 +1,27 @@
+uuid: 3247faa9-fe4f-4773-8d4a-22f69c07685b
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - belgrade
+_core:
+  default_config_hash: mmcopYofUmb3PLb10rD6utbPoo6_zpxaX4yf3i4xmH8
+id: belgrade_page_title
+theme: belgrade
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/product/*\r\n/products*"
+    negate: true
+    context_mapping: {  }

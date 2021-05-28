@@ -1,0 +1,10 @@
+uuid: 0b005c23-227e-436f-9530-c685dfbb30a1
+langcode: es
+status: true
+dependencies: {  }
+id: frame
+label: Cuadro
+orderItemType: default
+generateTitle: false
+traits: {  }
+locked: false

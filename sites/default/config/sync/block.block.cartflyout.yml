@@ -1,0 +1,21 @@
+uuid: 91b3df54-ba8d-488a-ad07-461a8e92c58a
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_cart_flyout
+  theme:
+    - mavacuadros
+id: cartflyout
+theme: mavacuadros
+region: top_navigation
+weight: 0
+provider: null
+plugin: commerce_cart_flyout
+settings:
+  id: commerce_cart_flyout
+  label: 'Cart Flyout'
+  provider: commerce_cart_flyout
+  label_display: '0'
+  use_quantity_count: true
+visibility: {  }

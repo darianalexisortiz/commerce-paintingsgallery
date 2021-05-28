@@ -1,0 +1,158 @@
+uuid: 592e3675-667b-40ad-a51a-a8dab639b84e
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.frame
+    - field.field.commerce_product_variation.frame.attribute_framework
+    - field.field.commerce_product_variation.frame.attribute_size
+    - field.field.commerce_product_variation.frame.field_frame_denomination
+    - field.field.commerce_product_variation.frame.field_generic_size
+    - field.field.commerce_product_variation.frame.field_images
+  module:
+    - commerce_feeds
+    - commerce_product
+id: product_variation
+label: 'Variación de producto Cuadro'
+description: ''
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:commerce_product_variation'
+processor_configuration:
+  langcode: es
+  update_existing: 2
+  update_non_existent: _delete
+  expire: -1
+  owner_feed_author: false
+  owner_id: 71
+  authorize: true
+  skip_hash_check: true
+  values:
+    type: frame
+custom_sources:
+  sku:
+    label: SKU
+    value: SKU
+    machine_name: sku
+  denominacion:
+    label: Denominación
+    value: Denominación
+    machine_name: denominacion
+  '':
+    label: ''
+    value: ''
+    machine_name: ''
+  title_alt:
+    label: Titulo
+    value: Titulo
+    machine_name: title_alt
+  title_img:
+    label: titulo
+    value: titulo
+    machine_name: title_img
+  imagenes:
+    label: Imagenes
+    value: Imagenes
+    machine_name: imagenes
+  price:
+    label: Price
+    value: Price
+    machine_name: price
+  marco:
+    label: Marco
+    value: Marco
+    machine_name: marco
+  tamano:
+    label: Tamaño
+    value: Tamaño
+    machine_name: tamano
+  tamano_general:
+    label: 'Tamaño general'
+    value: 'Tamaño general'
+    machine_name: tamano_general
+  precio:
+    label: Precio
+    value: Precio
+    machine_name: precio
+  titulo_alt:
+    label: Título
+    value: Título
+    machine_name: titulo_alt
+  titulo_img:
+    label: Título
+    value: Título
+    machine_name: titulo_img
+mappings:
+  -
+    target: sku
+    map:
+      value: sku
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: field_frame_denomination
+    map:
+      target_id: denominacion
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+  -
+    target: field_images
+    map:
+      target_id: imagenes
+      alt: titulo_img
+      title: titulo_img
+    settings:
+      language: ''
+      reference_by: filename
+      existing: '2'
+      autocreate: 0
+  -
+    target: price
+    map:
+      number: precio
+    settings:
+      currency_code: ARS
+  -
+    target: attribute_framework
+    map:
+      target_id: marco
+    settings:
+      reference_by: name
+      autocreate: false
+  -
+    target: attribute_size
+    map:
+      target_id: tamano
+    settings:
+      reference_by: name
+      autocreate: false
+  -
+    target: field_generic_size
+    map:
+      target_id: tamano_general
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+  -
+    target: title
+    map:
+      value: sku
+    unique: {  }
+    settings:
+      language: ''

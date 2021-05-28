@@ -1,0 +1,12 @@
+uuid: f6757c05-be93-477e-b517-464de10911f0
+langcode: es
+status: true
+dependencies: {  }
+id: frame
+label: Cuadro
+description: ''
+variationType: frame
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

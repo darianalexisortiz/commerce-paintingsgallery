@@ -1,0 +1,29 @@
+uuid: c7537670-2db0-4b8d-a63c-2c5feeb35704
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.frame
+    - field.storage.commerce_product_variation.field_frame_denomination
+    - taxonomy.vocabulary.frame_denomination
+id: commerce_product_variation.frame.field_frame_denomination
+field_name: field_frame_denomination
+entity_type: commerce_product_variation
+bundle: frame
+label: Denominación
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      frame_denomination: frame_denomination
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

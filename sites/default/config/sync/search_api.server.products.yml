@@ -1,0 +1,14 @@
+uuid: f31f52e5-371d-4dad-a905-b5b2a0dd4333
+langcode: es
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: products
+name: Productos
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words

@@ -1,0 +1,28 @@
+uuid: 59424686-e092-47b0-83bf-6dda76118677
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_checkout
+    - system
+  theme:
+    - mavacuadros
+_core:
+  default_config_hash: jSLJ3sJUecEmCmbbB-ISvExMtHpzXsFIguGKTTI6lPA
+id: mavacuadros_checkout_progress
+theme: mavacuadros
+region: content
+weight: -6
+provider: null
+plugin: commerce_checkout_progress
+settings:
+  id: commerce_checkout_progress
+  label: 'Checkout progress'
+  provider: commerce_checkout
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/checkout/*'
+    negate: false
+    context_mapping: {  }

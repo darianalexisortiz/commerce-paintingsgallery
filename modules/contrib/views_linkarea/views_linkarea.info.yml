@@ -1,0 +1,13 @@
+name: 'Views Link Area'
+description: 'A Views area plugin to allow links as headers and footers for views.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Views'
+dependencies:
+  - drupal:views
+
+# Information added by Drupal.org packaging script on 2020-11-21
+version: '8.x-1.2'
+project: 'views_linkarea'
+datestamp: 1605924576

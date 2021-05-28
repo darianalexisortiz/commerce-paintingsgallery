@@ -1,0 +1,27 @@
+uuid: 40b977d4-3d54-4741-9c50-d88e7ce4bcbc
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mavacuadros
+_core:
+  default_config_hash: N1cq7jc4R0m_29rs2Jnz0WjcslEeZ0AsN9Od1-_vW9s
+id: mavacuadros_breadcrumbs
+theme: mavacuadros
+region: highlighted
+weight: -8
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

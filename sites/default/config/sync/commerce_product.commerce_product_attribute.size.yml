@@ -1,0 +1,7 @@
+uuid: 2b8d19eb-7ced-4e82-a4e4-f0d3e57073a3
+langcode: es
+status: true
+dependencies: {  }
+id: size
+label: Tamaño
+elementType: commerce_product_rendered_attribute

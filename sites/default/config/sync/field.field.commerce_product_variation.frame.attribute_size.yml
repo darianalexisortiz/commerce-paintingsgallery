@@ -1,0 +1,28 @@
+uuid: 29f0d2e5-2c6e-442b-93e1-f5f2bd95fdcb
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.size
+    - commerce_product.commerce_product_variation_type.frame
+    - field.storage.commerce_product_variation.attribute_size
+id: commerce_product_variation.frame.attribute_size
+field_name: attribute_size
+entity_type: commerce_product_variation
+bundle: frame
+label: Tamaño
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product_attribute_value'
+  handler_settings:
+    target_bundles:
+      size: size
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: framework
+field_type: entity_reference

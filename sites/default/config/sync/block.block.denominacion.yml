@@ -1,0 +1,29 @@
+uuid: cbf19b39-59ba-4101-8892-f4e370f7be3f
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.denominacion
+  module:
+    - facets
+    - system
+  theme:
+    - mavacuadros
+id: denominacion
+theme: mavacuadros
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'facet_block:denominacion'
+settings:
+  id: 'facet_block:denominacion'
+  label: Denominación
+  provider: facets
+  label_display: visible
+  block_id: denominacion
+visibility:
+  request_path:
+    id: request_path
+    pages: "/productos\r\n/productos/*"
+    negate: false
+    context_mapping: {  }

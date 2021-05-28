@@ -1,0 +1,15 @@
+uuid: d02d9cad-4bed-4c66-8fcd-744c5f24f913
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.frame_category
+id: taxonomy_term.frame_category.default
+targetEntityType: taxonomy_term
+bundle: frame_category
+mode: default
+content: {  }
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

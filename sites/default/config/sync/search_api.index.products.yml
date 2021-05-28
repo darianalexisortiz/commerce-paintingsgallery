@@ -1,0 +1,198 @@
+uuid: f31f52e5-371d-4dad-a905-b5b2a0dd4333
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.commerce_product.field_frame_category
+    - field.storage.commerce_product.field_product_category
+    - field.storage.commerce_product_variation.field_frame_denomination
+    - field.storage.commerce_product_variation.attribute_framework
+    - field.storage.commerce_product_variation.attribute_size
+    - search_api.server.products
+  module:
+    - taxonomy
+    - commerce_product
+    - search_api
+id: products
+name: Productos
+description: ''
+read_only: false
+field_settings:
+  created:
+    label: Created
+    datasource_id: 'entity:commerce_product'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - commerce_product
+  field_frame_category:
+    label: 'Categoría de cuadro'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_frame_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_frame_category
+  field_frame_denomination:
+    label: Denominación
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:field_frame_denomination'
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product_variation.field_frame_denomination
+      module:
+        - commerce_product
+  field_product_category:
+    label: 'Categoría de producto'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_product_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_product_category
+  frame_category:
+    label: 'Categoría de cuadro » Taxonomy term » Name'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'field_frame_category:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_frame_category
+      module:
+        - taxonomy
+  frame_denomination:
+    label: 'Denominación » Término de taxonomía » Name'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:field_frame_denomination:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product_variation.field_frame_denomination
+      module:
+        - commerce_product
+        - taxonomy
+  framework:
+    label: Marco
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:attribute_framework:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product_variation.attribute_framework
+      module:
+        - commerce_product
+  number:
+    label: Price
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:price:number'
+    type: decimal
+    dependencies:
+      module:
+        - commerce_product
+  product_category:
+    label: 'Categoría de producto » Taxonomy term » Name'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'field_product_category:entity:name'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_product_category
+      module:
+        - taxonomy
+  product_id:
+    label: ID
+    datasource_id: 'entity:commerce_product'
+    property_path: product_id
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+  size:
+    label: Tamaño
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:attribute_size:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product_variation.attribute_size
+      module:
+        - commerce_product
+  status:
+    label: Publicado
+    datasource_id: 'entity:commerce_product'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - commerce_product
+  title:
+    label: Título
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: text
+    boost: !!float 5
+    dependencies:
+      module:
+        - commerce_product
+  title_1:
+    label: 'Title (for sorting)'
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  type:
+    label: 'Tipo de producto'
+    datasource_id: 'entity:commerce_product'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  hierarchy:
+    fields:
+      field_product_category: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_frame_category
+      - field_frame_denomination
+      - field_product_category
+      - frame_category
+      - frame_denomination
+      - framework
+      - product_category
+      - size
+      - title
+      - title_1
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: products

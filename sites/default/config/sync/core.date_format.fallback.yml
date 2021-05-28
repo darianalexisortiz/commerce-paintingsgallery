@@ -1,0 +1,10 @@
+uuid: 3dc5286d-7fb7-4ad3-bed9-f86aff13bdfb
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7klS5IWXrwzVaPpYZFAs6wcx8U2FF1X73OfrtTsvuvE
+id: fallback
+label: 'Formato de fecha de respaldo'
+locked: true
+pattern: 'D, m/d/Y - H:i'

@@ -1,0 +1,15 @@
+uuid: a418c02d-9980-41fa-9308-05029f0387fb
+name: Mavacuadros
+mail: info@mavacuadros.com.ar
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+langcode: es
+default_langcode: es
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: ''

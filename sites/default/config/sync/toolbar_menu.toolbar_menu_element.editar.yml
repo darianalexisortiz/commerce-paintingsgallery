@@ -1,0 +1,9 @@
+uuid: ac0d80cf-2d75-425f-b075-529515e3a480
+langcode: es
+status: true
+dependencies: {  }
+id: editar
+label: Editar
+weight: null
+menu: editor
+rewrite_label: false

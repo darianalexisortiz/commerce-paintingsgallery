@@ -1,0 +1,22 @@
+uuid: d7be0d89-d912-4a29-84a6-02afe5684c42
+langcode: es
+status: true
+dependencies:
+  theme:
+    - mavacuadros
+_core:
+  default_config_hash: rmiFUWInr28Z1v9rk-oycl_G9hlS7PzBvKbih2qIEuM
+id: mavacuadros_local_tasks
+theme: mavacuadros
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: 06978dae-40ae-4a1b-977b-f0b1c630b3f0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_page_portaretratos
+    - node.type.landing_page
+id: node.landing_page.field_landing_page_portaretratos
+field_name: field_landing_page_portaretratos
+entity_type: node
+bundle: landing_page
+label: Portaretratos
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: product_variation_reference
+      display_name: entity_reference_1
+      arguments:
+        - '11'
+field_type: entity_reference

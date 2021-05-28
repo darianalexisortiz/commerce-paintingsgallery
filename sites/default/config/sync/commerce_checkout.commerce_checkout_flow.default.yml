@@ -1,0 +1,60 @@
+uuid: 11edf007-84a6-4d37-932a-e38767b1f5ec
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_payment
+    - commerce_promotion
+    - email_registration
+_core:
+  default_config_hash: W37E6amSN5ZwF0sP-cmLtXFkJXrwBk0M7fiqWgXXclI
+id: default
+label: General
+plugin: multistep_default
+configuration:
+  display_checkout_progress: true
+  panes:
+    login:
+      allow_guest_checkout: true
+      allow_registration: false
+      step: login
+      weight: 0
+    contact_information:
+      double_entry: true
+      step: order_information
+      weight: 1
+    review:
+      step: review
+      weight: 3
+    completion_message:
+      message:
+        value: 'Su número de pedido es [commerce_order:order_number]. Puede ver su pedido en la página de su cuenta cuando inicie sesión.'
+        format: plain_text
+      step: complete
+      weight: 5
+    order_summary:
+      view: null
+      step: _sidebar
+      weight: 7
+    completion_register:
+      step: complete
+      weight: 6
+    payment_process:
+      capture: true
+      step: payment
+      weight: 4
+    payment_information:
+      step: order_information
+      weight: 2
+    coupon_redemption:
+      allow_multiple: false
+      step: _disabled
+      weight: 8
+    email_registration_login:
+      allow_guest_checkout: true
+      allow_registration: false
+      step: _disabled
+      weight: 9
+    email_registration_completion_registration:
+      step: _disabled
+      weight: 10

@@ -1,0 +1,26 @@
+uuid: 8b8aa88b-0c20-4490-a8a0-7bc08ca42c30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_page_relojes
+    - node.type.landing_page
+id: node.landing_page.field_landing_page_relojes
+field_name: field_landing_page_relojes
+entity_type: node
+bundle: landing_page
+label: Relojes
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: product_variation_reference
+      display_name: entity_reference_1
+      arguments:
+        - '12'
+field_type: entity_reference

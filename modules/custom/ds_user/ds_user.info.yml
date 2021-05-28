@@ -1,0 +1,6 @@
+name: Ds User
+description: A module for users.
+type: module
+package: User interface
+core: 8.x
+

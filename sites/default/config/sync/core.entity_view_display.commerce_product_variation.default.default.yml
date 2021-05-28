@@ -1,0 +1,72 @@
+uuid: 5314c845-d38a-436d-bef9-9ce6d8cdc560
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - field.field.commerce_product_variation.default.field_images
+  module:
+    - blazy
+    - commerce_order
+id: commerce_product_variation.default.default
+targetEntityType: commerce_product_variation
+bundle: default
+mode: default
+content:
+  field_images:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: ''
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      current_view_mode: ''
+      skin: ''
+      fx: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      caption: {  }
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: 0
+      grid_medium: 0
+      grid_small: 0
+    third_party_settings: {  }
+    type: blazy
+    region: content
+  price:
+    label: hidden
+    type: commerce_price_calculated
+    weight: 2
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+      adjustment_types: {  }
+    third_party_settings: {  }
+  sku:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  list_price: true
+  product_id: true
+  search_api_excerpt: true
+  title: true

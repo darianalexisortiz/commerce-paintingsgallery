@@ -1,0 +1,15 @@
+uuid: 438b1ac1-f15f-47e9-bba2-679fad94b919
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_category
+id: taxonomy_term.product_category.default
+targetEntityType: taxonomy_term
+bundle: product_category
+mode: default
+content: {  }
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,7 @@
+uuid: 2aa7d64c-1ffd-45f7-acd3-c46c92ab069b
+langcode: es
+status: true
+dependencies: {  }
+id: framework
+label: Marco
+elementType: commerce_product_rendered_attribute

@@ -1,0 +1,25 @@
+uuid: c735484b-50e5-4cb4-9168-4932a47a8b84
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.catalog
+  module:
+    - system
+  theme:
+    - mavacuadros
+id: catalogo_2
+theme: mavacuadros
+region: header
+weight: -9
+provider: null
+plugin: 'system_menu_block:catalog'
+settings:
+  id: 'system_menu_block:catalog'
+  label: Catálogo
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

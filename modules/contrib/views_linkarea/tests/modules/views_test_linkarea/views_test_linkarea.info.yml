@@ -1,0 +1,13 @@
+name: 'Views Test Link Area'
+type: module
+description: 'Provides default views for tests.'
+package: Testing
+# version: 8.x-1.x
+core: 8.x
+dependencies:
+  - drupal:views
+
+# Information added by Drupal.org packaging script on 2020-11-21
+version: '8.x-1.2'
+project: 'views_linkarea'
+datestamp: 1605924576

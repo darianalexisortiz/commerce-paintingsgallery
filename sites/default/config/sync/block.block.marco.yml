@@ -1,0 +1,29 @@
+uuid: 2fbb37ca-d5bf-491e-9b53-167ca6aa5f80
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.marco
+  module:
+    - facets
+    - system
+  theme:
+    - mavacuadros
+id: marco
+theme: mavacuadros
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'facet_block:marco'
+settings:
+  id: 'facet_block:marco'
+  label: Marco
+  provider: facets
+  label_display: visible
+  block_id: marco
+visibility:
+  request_path:
+    id: request_path
+    pages: "/productos\r\n/productos/*"
+    negate: false
+    context_mapping: {  }

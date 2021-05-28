@@ -1,0 +1,30 @@
+uuid: cec40aa0-e060-4875-8f7f-3c2f75ee5b43
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.frame
+    - field.storage.commerce_product.body
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    restricted_html: restricted_html
+    basic_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: commerce_product.frame.body
+field_name: body
+entity_type: commerce_product
+bundle: frame
+label: Detalle
+description: Opcional
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

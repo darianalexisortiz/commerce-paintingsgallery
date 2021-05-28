@@ -1,0 +1,8 @@
+uuid: af4f5d07-8b9a-4b05-a60d-ca0f9fd891f6
+langcode: es
+status: true
+dependencies: {  }
+id: catalog
+label: Catálogo
+description: ''
+locked: false

@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_user_login().
+ *
+ * When user logins check the flag and last updated profile and act accordingly.
+ */
+function ds_user_user_login($account) {
+  /*if (!$account->getLastAccessedTime()) {
+  switch ($account->field_tipo_de_usuario->getString()) {
+  case 'Persona':
+  $destination = '/register/person/2';
+  break;
+  case 'Institución o Centro de Investigación':
+  $destination = '/register/institution/2';
+  break;
+  case 'Empresa':
+  $destination = '/register/company/2';
+  break;
+  }
+  } else {*/
+  //    $destination = Url::fromRoute('/');
+  /* }*/
+
+  /* $response = new RedirectResponse('/productos');
+  $response->send(); */
+}

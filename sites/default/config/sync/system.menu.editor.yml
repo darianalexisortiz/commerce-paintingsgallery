@@ -1,0 +1,8 @@
+uuid: 966afade-3f58-438a-8a16-5fa49cc96d28
+langcode: es
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+description: ''
+locked: false
