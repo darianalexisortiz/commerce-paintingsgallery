@@ -64,6 +64,7 @@
         "drupal/pathauto": "^1.8",
         "drupal/profile": "^1.2",
         "drupal/recaptcha": "^3.0",
+        "drupal/recaptcha_v3": "^1.4",
         "drupal/scroll_progress": "^2.1",
         "drupal/search_api": "^1.18",
         "drupal/search_api_page": "^1.0@beta",
