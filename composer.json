@@ -82,7 +82,7 @@
         "drupal/twig_tweak": "^2.8",
         "drupal/userprotect": "^1.1",
         "drupal/views_bootstrap": "^4.3",
-        "drupal/views_bulk_operations": "3.x-dev@dev",
+        "drupal/views_bulk_operations": "^3.13",
         "drupal/views_data_export": "^1.0",
         "drupal/views_infinite_scroll": "^1.7",
         "drupal/views_linkarea": "^1.1",
