@@ -1,0 +1,10 @@
+uuid: 362f990d-d3c6-458b-8410-ecb06e1ab547
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.order_item
+label: 'Linea de pedido'
+targetEntityType: commerce_product_variation
+cache: true

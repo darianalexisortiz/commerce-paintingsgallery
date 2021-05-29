@@ -6,7 +6,7 @@ smtp_credential_provider: swiftmailer
 smtp_credentials:
   swiftmailer:
     username: info@mavacuadros.com.ar
-    password: ftVbbzpWAK
+    password: Gk1jMqNwvz2p
 sendmail_path: /usr/sbin/sendmail
 sendmail_mode: bs
 spool_directory: ''

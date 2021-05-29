@@ -1,0 +1,40 @@
+uuid: c044b269-470a-4787-8d74-a73ad7d91ba8
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - core.entity_view_mode.commerce_product_variation.order_item
+    - field.field.commerce_product_variation.default.field_images
+    - image.style.thumbnail
+  module:
+    - image
+id: commerce_product_variation.default.order_item
+targetEntityType: commerce_product_variation
+bundle: default
+mode: order_item
+content:
+  field_images:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: file
+    third_party_settings: {  }
+    type: image
+    region: content
+  sku:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  list_price: true
+  price: true
+  product_id: true
+  search_api_excerpt: true
+  title: true

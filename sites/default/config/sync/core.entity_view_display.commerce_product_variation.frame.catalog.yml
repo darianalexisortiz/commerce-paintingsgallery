@@ -13,6 +13,7 @@ dependencies:
     - field.field.commerce_product_variation.frame.field_images
     - image.style.large
     - image.style.thumbnail
+    - responsive_image.styles.wide
   module:
     - blazy
     - commerce_order
@@ -28,10 +29,10 @@ content:
     label: hidden
     settings:
       image_style: large
-      responsive_image_style: ''
+      responsive_image_style: wide
       media_switch: ''
       thumbnail_style: thumbnail
-      ratio: ''
+      ratio: fluid
       current_view_mode: catalog
       background: false
       caption:

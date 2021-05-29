@@ -69,7 +69,7 @@ display:
             offset_label: Offset
           tags:
             previous: '‹ anterior'
-            next: 'next ›'
+            next: 'siguiente ›'
             first: '« primero'
             last: 'último »'
           quantity: 9
