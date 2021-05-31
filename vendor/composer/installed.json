@@ -5059,6 +5059,53 @@
             "install-path": "../../modules/contrib/devel"
         },
         {
+            "name": "drupal/disable_user_view",
+            "version": "1.3.0",
+            "version_normalized": "1.3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/disable_user_view.git",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/disable_user_view-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "2a05c1988b344de36cb185e07b01ebd3ebb47b61"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1572332285",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "viisut",
+                    "homepage": "https://www.drupal.org/user/3219801"
+                }
+            ],
+            "description": "Remove user page functionality and redirect to edit page",
+            "homepage": "https://www.drupal.org/project/disable_user_view",
+            "support": {
+                "source": "https://git.drupalcode.org/project/disable_user_view"
+            },
+            "install-path": "../../modules/contrib/disable_user_view"
+        },
+        {
             "name": "drupal/email_registration",
             "version": "1.1.0",
             "version_normalized": "1.1.0.0",
@@ -8311,6 +8358,61 @@
             "install-path": "../../modules/contrib/twig_tweak"
         },
         {
+            "name": "drupal/twig_vardumper",
+            "version": "2.2.0",
+            "version_normalized": "2.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/twig_vardumper.git",
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twig_vardumper-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "2b42f2a88fe9731edf0e055745b981ca20e32678"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "symfony/var-dumper": "~4.2|~5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.2",
+                    "datestamp": "1591885101",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ruben Egiguren a.k.a keopx",
+                    "homepage": "https://www.drupal.org/user/377362",
+                    "email": "keopx@keopx.net"
+                }
+            ],
+            "description": "Twig vardumper provides a better dump() and vardumper() function that can help you debug Twig variables.",
+            "homepage": "https://www.drupal.org/project/twig_vardumper",
+            "keywords": [
+                "Development",
+                "Drupal",
+                "Twig"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/twig_vardumper",
+                "issues": "https://www.drupal.org/project/issues/twig_vardumper"
+            },
+            "install-path": "../../modules/contrib/twig_vardumper"
+        },
+        {
             "name": "drupal/userprotect",
             "version": "1.1.0",
             "version_normalized": "1.1.0.0",
@@ -8368,6 +8470,66 @@
                 "issues": "https://www.drupal.org/project/issues/userprotect"
             },
             "install-path": "../../modules/contrib/userprotect"
+        },
+        {
+            "name": "drupal/vardumper",
+            "version": "1.5.0",
+            "version_normalized": "1.5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/vardumper.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/vardumper-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "c1dca7e6db6e9f8cb4056addddbf3e827a397c95"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "php": ">= 5.3.10",
+                "symfony/var-dumper": "^3 || ^4 || ^5"
+            },
+            "require-dev": {
+                "drupol/drupal-conventions": "^1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1593424134",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "grumphp": {
+                    "config-default-path": "vendor/drupol/drupal-conventions/config/drupal8/grumphp.yml"
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pol Dellaiera",
+                    "homepage": "https://www.drupal.org/user/47194",
+                    "email": "pol.dellaiera@protonmail.com"
+                },
+                {
+                    "name": "lussoluca",
+                    "homepage": "https://www.drupal.org/user/138068"
+                }
+            ],
+            "description": "Variable dumper service.",
+            "homepage": "https://www.drupal.org/project/vardumper",
+            "support": {
+                "source": "https://git.drupalcode.org/project/vardumper"
+            },
+            "install-path": "../../modules/contrib/vardumper"
         },
         {
             "name": "drupal/views_bootstrap",

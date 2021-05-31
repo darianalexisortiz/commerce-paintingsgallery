@@ -85,7 +85,17 @@ ul[data-drupal-views-infinite-scroll-pager] a:focus {
 }
 .commerce-product--full .field--name-price,
 .commerce-product--full .field--name-title {
-  font-size: 30px;
+  font-size: 25px;
+}
+
+.commerce-product--full .field--name-body,
+.commerce-product--full .field--name-variations,
+.commerce-product--full .field--name-sku {
+  margin: 0 0;
+}
+
+.product-img--main {
+  height: 370px;
 }
 
 .product-img--main__image {
@@ -225,6 +235,10 @@ body.toolbar-fixed.toolbar-tray-open .cart-offcanvas {
  border-right:0;
 }
 
+.commerce-product--full .attribute-widgets .product--rendered-attribute {
+  margin: 8px 0;
+}
+
 .region-navigation .menu-catalog li {
   padding: 10px 0;
 }
@@ -310,12 +324,14 @@ body.toolbar-fixed.toolbar-tray-open .cart-offcanvas {
   .modal-body .product-img--main {
     min-height: 10px;
     height: 700px;
+    /*height: 40vh;*/
   }
 }
 
 .modal-body {
  overflow: auto !important;
 }
+
 @media (min-width: 768px) {
   .page-node-type-landing-page .row.first {
     display: flex;
@@ -698,4 +714,7 @@ body.toolbar-fixed.toolbar-tray-open .cart-offcanvas {
 
 .modal-dialog .commerce-product--full .form-submit {
   display: none !important;
+}
+.cart-offcanvas .is-close a{
+  display:none;
 }

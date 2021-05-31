@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '5e6d8233f3ef8731aa6ae1305ac1ba635cf5ae16',
+    'reference' => '5fda362b2698c0f9ece296c0a36aafa26851faf5',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -1041,6 +1041,15 @@
       ),
       'reference' => '4.1.1',
     ),
+    'drupal/disable_user_view' => 
+    array (
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.3',
+    ),
     'drupal/dynamic_page_cache' => 
     array (
       'replaced' => 
@@ -1361,7 +1370,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5e6d8233f3ef8731aa6ae1305ac1ba635cf5ae16',
+      'reference' => '5fda362b2698c0f9ece296c0a36aafa26851faf5',
     ),
     'drupal/libraries' => 
     array (
@@ -1910,6 +1919,15 @@
       ),
       'reference' => '8.x-2.9',
     ),
+    'drupal/twig_vardumper' => 
+    array (
+      'pretty_version' => '2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.2',
+    ),
     'drupal/update' => 
     array (
       'replaced' => 
@@ -1932,6 +1950,15 @@
       array (
       ),
       'reference' => '8.x-1.1',
+    ),
+    'drupal/vardumper' => 
+    array (
+      'pretty_version' => '1.5.0',
+      'version' => '1.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.5',
     ),
     'drupal/views' => 
     array (

@@ -10,3 +10,6 @@ global:
       'assets/js/main.js': { }
   dependencies:
     - belgrade/fonts
+commerce.product-images:
+  js:
+    'assets/js/product_images.js': { }

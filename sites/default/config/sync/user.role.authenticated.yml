@@ -19,7 +19,6 @@ permissions:
   - 'create user accounts'
   - 'deactivate user accounts'
   - 'delete files'
-  - 'manage own commerce_payment_method'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

@@ -22,6 +22,12 @@
 
   Drupal.behaviors.General = {
     attach: function (context, settings) {
+
+      $('.commerce-product--catalog__info .field--name-price').each(function (index) {
+        if ($(this).text() === '$ 0,00') {
+          $(this).text('');
+        }
+      });
       $('.field--name-price').each(function (index) {
         if ($(this).text() === '$ 0,00') {
           $(this).text('Consultar precio');
