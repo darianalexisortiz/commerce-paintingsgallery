@@ -176,7 +176,18 @@ class SimplePopupBlocksAddForm extends ConfigFormBase {
           ->t('Right bar'),
       ],
     ];
-    $form['visit_counts'] = [
+    $form['popup_frequency'] = [
+      '#type' => 'fieldset',
+      '#title' => $this->t('Popup Frequency'),
+    ];
+
+    $form['popup_frequency']['use_time_frequency'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use time frequency instead of visit count'),
+      '#default_value' => 0,
+    ];
+
+    $form['popup_frequency']['visit_counts'] = [
       '#title' => $this->t('Visit counts'),
       '#type' => 'select',
       '#multiple' => TRUE,
@@ -188,6 +199,26 @@ class SimplePopupBlocksAddForm extends ConfigFormBase {
         0 = Show popup on users each visit<br>
         1,2 = Show popup on users first and second visit<br>
         1,4,7 = Show popup on users first, forth and seventh visit"),
+      '#states' => [
+        'invisible' => [
+          ':input[name="use_time_frequency"]' => ['checked' => TRUE],
+        ],
+      ],
+    ];
+
+    $form['popup_frequency']['time_frequency'] = [
+      '#title' => $this->t('Time frequency'),
+      '#type' => 'select',
+      '#required' => TRUE,
+      '#options' => [3600 => 'Hourly', 86400 => 'Daily', 604800 => 'Weekly'],
+      '#default_value' => 3600,
+      '#description' => $this->t("Choose frequency popup is displayed to the visitor"),
+      '#states' => [
+        'visible' => [
+          ':input[name="use_time_frequency"]' => ['checked' => TRUE],
+        ],
+      ],
+		
     ];
     $form['minimize'] = [
       '#type' => 'checkbox',
@@ -199,7 +230,12 @@ class SimplePopupBlocksAddForm extends ConfigFormBase {
       '#title' => $this->t('Close button'),
       '#default_value' => 1,
     ];
-    $form['escape'] = [
+    $form['button_configuration']['show_minimized_button'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Show minimized button when popup is not automatically triggered'),
+      '#default_value' => 0,
+    ];
+    $form['enable_escape'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('ESC key to close'),
       '#default_value' => 1,
@@ -235,6 +271,13 @@ class SimplePopupBlocksAddForm extends ConfigFormBase {
         ],
       ],
     ];
+  $form['trigger_width'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Trigger width'),
+      '#size' => 5,
+      '#default_value' => "",
+      '#description' => $this->t("Specify a pixel width at which the popup should trigger, or leave blank for all widths. Example: 800.")
+    ];
     $form['trigger_selector'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Add css id or class starting with # or .'),
@@ -267,7 +310,7 @@ class SimplePopupBlocksAddForm extends ConfigFormBase {
     ];
     $form['submit'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Convert to popup'),
+      '#value' => $this->t('Save Popup'),
     ];
     return $form;
   }
@@ -315,7 +358,6 @@ class SimplePopupBlocksAddForm extends ConfigFormBase {
     else {
       $identifier = $form_state->getValue('custom_css');
     }
-    $visit_counts = serialize($form_state->getValue('visit_counts'));
     $delay = $form_state->getValue('delay');
     if (empty($delay) || $delay < 0) {
       $delay = 0;
@@ -327,6 +369,12 @@ class SimplePopupBlocksAddForm extends ConfigFormBase {
     $cookie_expiry = $form_state->getValue('cookie_expiry');
     if (strlen($cookie_expiry) == 0 || $cookie_expiry < 0) {
       $cookie_expiry = 100;
+    }
+    if ($form_state->getValue('use_time_frequency')) {
+      $visit_counts = serialize([0 => '0']);
+    }
+    else {
+      $visit_counts = serialize($form_state->getValue('visit_counts'));
     }
 
     $uid = preg_replace('@[^a-z0-9_]+@','_',strtolower($form_state->getValue('uid')));
@@ -341,10 +389,13 @@ class SimplePopupBlocksAddForm extends ConfigFormBase {
       ->set('overlay', $form_state->getValue('overlay'))
       ->set('trigger_method', $form_state->getValue('trigger_method'))
       ->set('trigger_selector', $form_state->getValue('trigger_selector'))
-      ->set('escape', $form_state->getValue('escape'))
+      ->set('enable_escape', $form_state->getValue('enable_escape'))
       ->set('delay', $delay)
       ->set('minimize', $form_state->getValue('minimize'))
       ->set('close', $form_state->getValue('close'))
+      ->set('use_time_frequency', $form_state->getValue('use_time_frequency'))
+      ->set('time_frequency', $form_state->getValue('time_frequency'))
+      ->set('show_minimized_button', $form_state->getValue('show_minimized_button'))		  
       ->set('width', $width)
       ->set('cookie_expiry', $cookie_expiry)
       ->set('status', $form_state->getValue('status'))

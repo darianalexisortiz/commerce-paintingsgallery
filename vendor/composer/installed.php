@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '5fda362b2698c0f9ece296c0a36aafa26851faf5',
+    'reference' => '21a0759875df6c07164be7da479951917a4b43ff',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -198,12 +198,12 @@
     ),
     'cweagans/composer-patches' => 
     array (
-      'pretty_version' => '1.7.0',
-      'version' => '1.7.0.0',
+      'pretty_version' => '1.7.1',
+      'version' => '1.7.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ae02121445ad75f4eaff800cc532b5e6233e2ddf',
+      'reference' => '9888dcc74993c030b75f3dd548bb5e20cdbd740c',
     ),
     'dflydev/dot-access-configuration' => 
     array (
@@ -318,6 +318,15 @@
         0 => '8.9.16',
       ),
     ),
+    'drupal/ajax_add_to_cart' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
+    ),
     'drupal/ajax_loader' => 
     array (
       'pretty_version' => '1.5.0',
@@ -391,12 +400,12 @@
     ),
     'drupal/blazy' => 
     array (
-      'pretty_version' => '2.2.0',
-      'version' => '2.2.0.0',
+      'pretty_version' => '2.4.0',
+      'version' => '2.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-2.2',
+      'reference' => '8.x-2.4',
     ),
     'drupal/block' => 
     array (
@@ -437,12 +446,12 @@
     ),
     'drupal/bootstrap4' => 
     array (
-      'pretty_version' => '2.1.9',
-      'version' => '2.1.9.0',
+      'pretty_version' => '2.1.11',
+      'version' => '2.1.11.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2.1.9',
+      'reference' => '2.1.11',
     ),
     'drupal/breakpoint' => 
     array (
@@ -512,6 +521,15 @@
       array (
       ),
       'reference' => '8.x-2.24',
+    ),
+    'drupal/commerce_ajax_cart_message' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
     ),
     'drupal/commerce_bootstrap' => 
     array (
@@ -995,12 +1013,12 @@
     ),
     'drupal/ctools' => 
     array (
-      'pretty_version' => '3.6.0',
-      'version' => '3.6.0.0',
+      'pretty_version' => '3.7.0',
+      'version' => '3.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-3.6',
+      'reference' => '8.x-3.7',
     ),
     'drupal/currency' => 
     array (
@@ -1031,6 +1049,15 @@
       array (
         0 => '8.9.16',
       ),
+    ),
+    'drupal/dc_ajax_add_cart' => 
+    array (
+      'pretty_version' => '1.0.0-beta1',
+      'version' => '1.0.0.0-beta1',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0-beta1',
     ),
     'drupal/devel' => 
     array (
@@ -1084,12 +1111,12 @@
     ),
     'drupal/entity_browser' => 
     array (
-      'pretty_version' => '2.5.0',
-      'version' => '2.5.0.0',
+      'pretty_version' => '2.6.0',
+      'version' => '2.6.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-2.5',
+      'reference' => '8.x-2.6',
     ),
     'drupal/entity_class_formatter' => 
     array (
@@ -1216,12 +1243,12 @@
     ),
     'drupal/fontawesome' => 
     array (
-      'pretty_version' => '2.18.0',
-      'version' => '2.18.0.0',
+      'pretty_version' => '2.19.0',
+      'version' => '2.19.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-2.18',
+      'reference' => '8.x-2.19',
     ),
     'drupal/forum' => 
     array (
@@ -1370,7 +1397,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5fda362b2698c0f9ece296c0a36aafa26851faf5',
+      'reference' => '21a0759875df6c07164be7da479951917a4b43ff',
     ),
     'drupal/libraries' => 
     array (
@@ -1720,12 +1747,12 @@
     ),
     'drupal/simple_popup_blocks' => 
     array (
-      'pretty_version' => '2.7.0',
-      'version' => '2.7.0.0',
+      'pretty_version' => '2.8.0',
+      'version' => '2.8.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-2.7',
+      'reference' => '8.x-2.8',
     ),
     'drupal/simple_user_management' => 
     array (
@@ -1777,12 +1804,12 @@
     ),
     'drupal/state_machine' => 
     array (
-      'pretty_version' => '1.0.0',
-      'version' => '1.0.0.0',
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-1.0',
+      'reference' => '8.x-1.3',
     ),
     'drupal/statistics' => 
     array (
@@ -1953,12 +1980,12 @@
     ),
     'drupal/vardumper' => 
     array (
-      'pretty_version' => '1.5.0',
-      'version' => '1.5.0.0',
+      'pretty_version' => '1.6.0',
+      'version' => '1.6.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-1.5',
+      'reference' => '8.x-1.6',
     ),
     'drupal/views' => 
     array (
@@ -2039,12 +2066,12 @@
     ),
     'drupal/webform' => 
     array (
-      'pretty_version' => '5.26.0',
-      'version' => '5.26.0.0',
+      'pretty_version' => '5.27.0',
+      'version' => '5.27.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8.x-5.26',
+      'reference' => '8.x-5.27',
     ),
     'drupal/workflows' => 
     array (
@@ -2221,6 +2248,16 @@
       array (
       ),
       'reference' => '0ec57e8264ec92565974ead0d1724cf1026e10c1',
+    ),
+    'litespeedtech/lscache-drupal' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => 'f7061d8d7504b328a9cd46278e43ecff72a848e8',
     ),
     'lsolesen/pel' => 
     array (
@@ -2463,12 +2500,12 @@
     ),
     'symfony/config' => 
     array (
-      'pretty_version' => 'v4.4.23',
-      'version' => '4.4.23.0',
+      'pretty_version' => 'v4.4.25',
+      'version' => '4.4.25.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'be9e601f17fc684ddfd6c675fdfcd04bb51fa928',
+      'reference' => '2803882bb10353d277d4539635dd688a053d571c',
     ),
     'symfony/console' => 
     array (
@@ -2481,12 +2518,12 @@
     ),
     'symfony/css-selector' => 
     array (
-      'pretty_version' => 'v4.4.24',
-      'version' => '4.4.24.0',
+      'pretty_version' => 'v4.4.25',
+      'version' => '4.4.25.0',
       'aliases' => 
       array (
       ),
-      'reference' => '947cacaf1b3a2af6f13a435392873d5ddaba5f70',
+      'reference' => 'c1e29de6dc893b130b45d20d8051efbb040560a9',
     ),
     'symfony/debug' => 
     array (
@@ -2526,21 +2563,21 @@
     ),
     'symfony/filesystem' => 
     array (
-      'pretty_version' => 'v4.4.22',
-      'version' => '4.4.22.0',
+      'pretty_version' => 'v4.4.25',
+      'version' => '4.4.25.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f0f06656a18304cdeacb2c4c0113a2b78a2b4c2a',
+      'reference' => '2d926ebd76f52352deb3c9577d8c1d4b96eae429',
     ),
     'symfony/finder' => 
     array (
-      'pretty_version' => 'v4.4.24',
-      'version' => '4.4.24.0',
+      'pretty_version' => 'v4.4.25',
+      'version' => '4.4.25.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a96bc19ed87c88eec78e1a4c803bdc1446952983',
+      'reference' => 'ed33314396d968a8936c95f5bd1b88bd3b3e94a3',
     ),
     'symfony/http-foundation' => 
     array (
@@ -2632,6 +2669,15 @@
       ),
       'reference' => 'eca0bf41ed421bed1b57c4958bab16aa86b757d0',
     ),
+    'symfony/polyfill-php81' => 
+    array (
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e66119f3de95efc359483f810c4c3e6436279436',
+    ),
     'symfony/polyfill-util' => 
     array (
       'pretty_version' => 'v1.17.0',
@@ -2697,12 +2743,12 @@
     ),
     'symfony/var-dumper' => 
     array (
-      'pretty_version' => 'v4.4.22',
-      'version' => '4.4.22.0',
+      'pretty_version' => 'v4.4.25',
+      'version' => '4.4.25.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c194bcedde6295f3ec3e9eba1f5d484ea97c41a7',
+      'reference' => '31ea689a8e7d2410016b0d25fc15a1ba05a6e2e0',
     ),
     'symfony/yaml' => 
     array (

@@ -172,3 +172,21 @@ function simple_popup_blocks_update_8103(&$sandbox) {
     ->schema()
     ->changeField('simple_popup_blocks', 'escape', 'enable_escape', $enable_escape);
 }
+
+/**
+ * Add trigger width field in simple_popup_blocks table.
+ */
+function simple_popup_blocks_update_8104(&$sandbox) {
+
+    $trigger_width = [
+      'type' => 'int',
+      'not null' => FALSE,
+      'default' => NULL,
+      'description' => "Trigger width in px",
+    ];
+
+  $schema = Database::getConnection()
+    ->schema();
+  $schema
+    ->addField('simple_popup_blocks', 'trigger_width', $trigger_width);
+}

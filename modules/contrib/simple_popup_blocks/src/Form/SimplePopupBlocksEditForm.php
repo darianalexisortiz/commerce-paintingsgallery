@@ -49,16 +49,21 @@ class SimplePopupBlocksEditForm extends SimplePopupBlocksAddForm {
     $form['custom_css']['#default_value'] = $identifier;
     $form['css_selector']['#default_value'] = $data->get('css_selector');
     $form['layout']['#default_value'] = $data->get('layout');
-    $form['visit_counts']['#default_value'] = $visit_counts;
     $form['minimize']['#default_value'] = $data->get('minimize');
     $form['close']['#default_value'] = $data->get('close');
-    $form['escape']['#default_value'] = $data->get('escape');
+    $form['enable_escape']['#default_value'] = $data->get('enable_escape');
     $form['overlay']['#default_value'] = $data->get('overlay');
     $form['trigger_method']['#default_value'] = $data->get('trigger_method');
     $form['trigger_selector']['#default_value'] = $data->get('trigger_selector');
     $form['delay']['#default_value'] = $data->get('delay');
+	$form['trigger_width']['#default_value'] = $data->get('trigger_width');
     $form['width']['#default_value'] = $data->get('width');
     $form['cookie_expiry']['#default_value'] = $data->get('cookie_expiry');
+    $form['button_configuration']['show_minimized_button']['#default_value'] = $data->get('show_minimized_button');
+
+    $form['popup_frequency']['use_time_frequency']['#default_value'] = $data->get('use_time_frequency');
+    $form['popup_frequency']['time_frequency']['#default_value'] = $data->get('time_frequency');
+    $form['popup_frequency']['visit_counts']['#default_value'] = $visit_counts;	
 
     $block_id_append = '';
     if ($data->get('type') == 0) {
@@ -183,10 +188,14 @@ class SimplePopupBlocksEditForm extends SimplePopupBlocksAddForm {
     else {
       $identifier = $form_state->getValue('custom_css');
     }
-    $visit_counts = serialize($form_state->getValue('visit_counts'));
+
     $delay = $form_state->getValue('delay');
     if (empty($delay) || $delay < 0) {
       $delay = 0;
+    }
+    $trigger_width = $form_state->getValue('trigger_width');
+    if (empty($trigger_width) || $trigger_width < 0) {
+      $trigger_width = NULL;
     }
     $width = $form_state->getValue('width');
     if (empty($width) || $width < 0) {
@@ -195,6 +204,12 @@ class SimplePopupBlocksEditForm extends SimplePopupBlocksAddForm {
     $cookie_expiry = $form_state->getValue('cookie_expiry');
     if (strlen($cookie_expiry) == 0 || $cookie_expiry < 0) {
       $cookie_expiry = 100;
+    }
+    if ($form_state->getValue('use_time_frequency')) {
+      $visit_counts = serialize([0 => '0']);
+    }
+    else {
+      $visit_counts = serialize($form_state->getValue('visit_counts'));
     }
 
     $config = \Drupal::service('config.factory')->getEditable('simple_popup_blocks.popup_'.$form_state->getValue('uid'));
@@ -206,13 +221,17 @@ class SimplePopupBlocksEditForm extends SimplePopupBlocksAddForm {
       ->set('overlay', $form_state->getValue('overlay'))
       ->set('trigger_method', $form_state->getValue('trigger_method'))
       ->set('trigger_selector', $form_state->getValue('trigger_selector'))
-      ->set('escape', $form_state->getValue('escape'))
+      ->set('enable_escape', $form_state->getValue('enable_escape'))
       ->set('delay', $delay)
+	  ->set('trigger_width', $trigger_width)
       ->set('minimize', $form_state->getValue('minimize'))
       ->set('close', $form_state->getValue('close'))
       ->set('width', $width)
       ->set('cookie_expiry', $cookie_expiry)
       ->set('status', $form_state->getValue('status'))
+      ->set('use_time_frequency', $form_state->getValue('use_time_frequency'))
+      ->set('time_frequency', $form_state->getValue('time_frequency'))
+      ->set('show_minimized_button', $form_state->getValue('show_minimized_button'))		  
       ->save();
     parent::submitForm($form, $form_state);
 

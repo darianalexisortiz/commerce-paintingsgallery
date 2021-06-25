@@ -6,9 +6,12 @@
     attach: function (context, settings) {
       // Global variables
       var popup_settings = drupalSettings.simple_popup_blocks.settings,
-        _html = document.documentElement
+        _html = document.documentElement, windowWidth = $(window).width();
 
       $.each(popup_settings, function (index, values) {
+
+        // No popup when the window width is less than the trigger width.
+      if (windowWidth < values.trigger_width) {return null;};
 
         // Declaring variable inside foreach - so it will not global.
         var modal_class = '',
@@ -27,25 +30,72 @@
           layout_class = '',
           class_exists = false,
           delays = '',
-          browser_close_trigger = true
+          browser_close_trigger = true,
+          use_time_frequency = values.use_time_frequency,
+          time_frequency = values.time_frequency,
+          time_frequency_cookie = 0,
+          next_popup = 0,
+          current_timestamp = 0,
+          show_minimized_button = values.show_minimized_button,
+          show_model = true
         // Always show popup, so prevent from creating cookie
-        if (visit_counts_arr.length == 1 && visit_counts_arr[0] == 0) {
+        if (visit_counts_arr.length == 1 && visit_counts_arr[0] == 0 && use_time_frequency == 0) {
           allow_cookie = false
         }
+        // Check to see if the block exists in the current page.
+        var element = document.getElementById(block_id);
+        if (typeof(element) != 'undefined' && element != null) {
         // Creating cookie
         if (allow_cookie == true) {
+        if (use_time_frequency == 0) {
           read_cookie = readCookie('spb_' + block_id)
           if (read_cookie) {
-            cookie_val = +read_cookie + 1
-            createCookie('spb_' + block_id, cookie_val, cookie_days)
+            cookie_val = + read_cookie + 1
+            createCookie('spb_' + block_id, cookie_val, 100)
           }
           else {
-            createCookie('spb_' + block_id, cookie_val, cookie_days)
+            createCookie('spb_' + block_id, cookie_val, 100)
+          }
+          // Match cookie
+          cookie_val = cookie_val.toString()
+          match = $.inArray(cookie_val, visit_counts_arr)
+
+          if (match === -1) {
+            show_model = false
+          }
+          }
+          else {
+          time_frequency_cookie = readCookie('spb_time' + block_id)
+          current_timestamp = Math.floor(Date.now() / 1000)
+          next_popup = current_timestamp + parseInt(time_frequency, 10)
+
+          if (time_frequency_cookie) {
+            // If current_timestamp is greater than cookie time show the popup.
+            if (current_timestamp >= time_frequency_cookie) {
+              match = 1
+            }
+            // This should allow the time frequency to be adjusted down after
+            // the cookie has been set.
+            else if (next_popup <= time_frequency_cookie) {
+              match = 1
+            }
+            else {
+              match = -1
+              show_model = false
+            }
+
+            // Create new cookie for popup.
+            if (match === 1) {
+              createCookie('spb_time' + block_id, next_popup, 100)
+            }
+          }
+          else {
+            createCookie('spb_time' + block_id, next_popup, 100)
+          }
           }
         }
-        // Match cookie
-        cookie_val = cookie_val.toString()
-        match = $.inArray(cookie_val, visit_counts_arr)
+
+        }
         // Set css selector
         css_identity = '.'
         if (values.css_selector == 1) {
@@ -63,11 +113,8 @@
 		$(css_identity + block_id).once().
           wrap($('<div class="' + modal_class + '"></div>'))
         // Hide the popup initially
-        $('.' + modal_class).hide()
-        // Skip the popup based on visit counts settings
-        if (match == -1 && allow_cookie == true) {
-          return true
-        }      
+        $('.' + modal_class).once().hide()
+
         // Wrap remaining elements
         if ($(css_identity + block_id).closest('.spb-popup-main-wrapper').length) {
           return;
@@ -78,7 +125,7 @@
           wrap('<div id="' + spb_popup_id +
             '" class="simple-popup-blocks-global"></div>')
         $(css_identity + block_id).
-          before($('<div class="spb-controls"></div>'))        
+          before($('<div class="spb-controls"></div>'))
 
         // Skip code for non popup pages.
         class_exists = $('#' + spb_popup_id).
@@ -146,7 +193,9 @@
           // Top Center.
           case '5':
             $(layout_class).addClass('spb_top_center')
-            $(layout_class).css({})
+			  $(layout_class).css({
+			  'width': values.width,
+			  })
             break
           // Top bar.
           case '6':
@@ -173,26 +222,26 @@
             })
             break
         }
+      if (show_model === true) {
         // Automatic trigger with delay
         if (values.trigger_method == 0 && values.delay > 0) {
           delays = values.delay * 1000
           $('.' + modal_class).delay(delays).fadeIn('slow')
-		  $(css_identity + block_id).delay(delays).fadeIn('slow')
-          if (values.overlay == 1) {
-            setTimeout(stopTheScroll, delays)
-          }
+            if (values.overlay == 1) {
+              setTimeout(stopTheScroll, delays)
+            }
         }
         // Automatic trigger without delay
         else if (values.trigger_method == 0) {
-          $('.' + modal_class).show()
-          $(css_identity + block_id).show()
-          if (values.overlay == 1) {
-            stopTheScroll()
-          }
+            $('.' + modal_class).show()
+            $(css_identity + block_id).show()
+            if (values.overlay == 1) {
+              stopTheScroll()
+            }
         }
         // Manual trigger
         else if (values.trigger_method == 1) {
-          $(values.trigger_selector).click(function () {
+          $(document).on('click', values.trigger_selector, function (e) {
             $('.' + modal_class).show()
             $(css_identity + block_id).show()
             if (values.overlay == 1) {
@@ -216,6 +265,8 @@
             }
           })
         }
+        }
+
         // Trigger for close button click
         $('.' + modal_close_class).click(function () {
           $('.' + modal_class).hide()
@@ -234,7 +285,12 @@
           if (values.overlay == 1) {
             stopTheScroll()
           }
+
+        // Hide the minimized button.
+        if (show_minimized_button == 0) {
           $('.' + modal_minimized_class).hide()
+        }
+
         })
         // Trigger for ESC button click
         if (values.enable_escape == 1) {
@@ -246,6 +302,12 @@
             }
           })
         }
+
+      // Hide the minimized button.
+      if (show_minimized_button == 0) {
+        $('.' + modal_minimized_class).hide()
+      }
+
       }) // Foreach end.
     }
   } // document.ready end.

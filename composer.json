@@ -12,6 +12,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:litespeedtech/lscache-drupal.git"
         }
     ],
     "require": {
@@ -19,6 +23,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal/address": "^1.9",
         "drupal/admin_toolbar": "^2.4",
+        "drupal/ajax_add_to_cart": "^1.1",
         "drupal/ajax_loader": "^1.4",
         "drupal/allowed_formats": "^1.3",
         "drupal/back_to_top": "^1.1",
@@ -26,6 +31,7 @@
         "drupal/blazy": "^2.1",
         "drupal/bootstrap4": "^2.1",
         "drupal/commerce": "^2.21",
+        "drupal/commerce_ajax_cart_message": "^1.1",
         "drupal/commerce_cart_flyout": "^1.8",
         "drupal/commerce_demo": "^2.0",
         "drupal/commerce_feeds": "^1.0@alpha",
@@ -38,6 +44,7 @@
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/core_views_facets": "^1.2",
         "drupal/currency": "^3.3",
+        "drupal/dc_ajax_add_cart": "^1.0@beta",
         "drupal/devel": "^4.0",
         "drupal/disable_user_view": "^1.3",
         "drupal/email_registration": "^1.1",
@@ -96,7 +103,9 @@
         "drush/drush": "^9.7.1 | ^10.0.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "litespeedtech/lscache-drupal": "master"
+
     },
     "conflict": {
         "drupal/drupal": "*"

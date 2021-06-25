@@ -74,8 +74,8 @@
 }
 .spb_top_center {
   top: 0;
-  left: 20%;
-  right: 20%;
+  position: relative;
+  margin: auto;
 }
 .spb_top_bar {
   right: 0;

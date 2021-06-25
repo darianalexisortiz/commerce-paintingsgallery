@@ -36,13 +36,17 @@ function simple_popup_blocks_page_attachments(array &$attachments) {
   // Add libraries if it is not admin paths.
   $route = \Drupal::routeMatch()->getRouteObject();
   $is_admin = \Drupal::service('router.admin_context')->isAdminRoute($route);
-  $database = \Drupal::getContainer()->get('database');
   if (!$is_admin) {
     $popup_settings = [];
+	$cacheTags = [];
     $configFactory = \Drupal::service('config.factory');
     $configs = $configFactory->listAll('simple_popup_blocks.popup_');
     foreach ($configs as $config) {
       $data = $configFactory->get($config)->get();
+	  $configCacheTags = $configFactory->get($config)->getCacheTags();
+	  if (is_array($configCacheTags) && count($configCacheTags)) {
+	  $cacheTags = array_merge($cacheTags, $configCacheTags);
+      }
       if ($data['status'] == 1) {
         if ($data['type'] == 0) {
           $identifier = preg_replace('/[_]+/', '-', $data['identifier']);
@@ -53,9 +57,12 @@ function simple_popup_blocks_page_attachments(array &$attachments) {
         // Sanitize each entry.
         $popup_settings[] = array_map('Drupal\Component\Utility\Html::escape', $data);
       }
-      $attachments['#attached']['library'][] = 'simple_popup_blocks/simple_popup_blocks';
-      $attachments['#attached']['drupalSettings']['simple_popup_blocks']['settings'] = $popup_settings;
     }
+
+	$attachments['#attached']['library'][] = 'simple_popup_blocks/simple_popup_blocks';
+	$attachments['#attached']['drupalSettings']['simple_popup_blocks']['settings'] = $popup_settings;
+	$attachments['#cache']['tags'] = $cacheTags;
+
   }
 
 }

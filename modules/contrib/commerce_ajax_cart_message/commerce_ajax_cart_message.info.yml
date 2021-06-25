@@ -1,0 +1,12 @@
+name: Commerce Ajax Cart Message
+description: Disable the add to cart message if the request was an ajax request
+core: 8.x
+core_version_requirement: ^8 || ^9
+type: module
+dependencies:
+  - commerce:commerce_cart
+
+# Information added by Drupal.org packaging script on 2021-01-22
+version: '8.x-1.1'
+project: 'commerce_ajax_cart_message'
+datestamp: 1611323534

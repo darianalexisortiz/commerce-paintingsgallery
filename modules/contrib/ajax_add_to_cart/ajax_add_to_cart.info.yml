@@ -1,0 +1,14 @@
+name: Ajax add to cart
+type: module
+description: 'Add ajax add to cart functionality.'
+package: Commerce
+dependencies:
+  - drupal:commerce
+  - drupal:commerce_cart
+core: 8.x
+# datestamp: 1494330492
+
+# Information added by Drupal.org packaging script on 2020-07-22
+version: '8.x-1.1'
+project: 'ajax_add_to_cart'
+datestamp: 1595440209

@@ -5,7 +5,7 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 package: Media
 configure: simple_popup_blocks.add
-# Information added by Drupal.org packaging script on 2021-03-29
-version: '8.x-2.7'
+# Information added by Drupal.org packaging script on 2021-06-02
+version: '8.x-2.8'
 project: 'simple_popup_blocks'
-datestamp: 1617027621
+datestamp: 1622660242

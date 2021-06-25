@@ -55,7 +55,7 @@ class SimplePopupBlocksController extends ControllerBase {
     $header = [
       ['data' => $this->t('S.No')],
       ['data' => $this->t('Popup selector')],
-      ['data' => $this->t('Popup sourse')],
+      ['data' => $this->t('Popup source')],
       ['data' => $this->t('Layout')],
       ['data' => $this->t('Triggering')],
       ['data' => $this->t('Status')],
