@@ -38,10 +38,9 @@ Head to `Appearance` and clicking bootstrap4 `settings`.
 
 ### Subtheme
 
-* If you require subtheme (usually if you want to override templates), 
-    see [subtheme docs](_SUBTHEME/README.md).
+_SUBTHEME folder was removed and is no longer available.
 
-* Interface subtheme creation is coming to [Bootstrap4 Tools](https://www.drupal.org/project/bootstrap4_tools) module
+Subtheme can be created via UI interface in theme settings (`Appearance` menu).
 
 ## Development and patching
 
