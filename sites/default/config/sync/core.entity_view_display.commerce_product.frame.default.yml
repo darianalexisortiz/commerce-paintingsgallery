@@ -25,7 +25,7 @@ content:
     third_party_settings: {  }
   field_frame_category:
     type: entity_reference_label
-    weight: 3
+    weight: 2
     region: content
     label: inline
     settings:
@@ -41,7 +41,7 @@ content:
     third_party_settings: {  }
   variations:
     type: commerce_cart_flyout_add_to_cart
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings: {  }

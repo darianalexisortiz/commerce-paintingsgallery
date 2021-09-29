@@ -12,7 +12,6 @@ dependencies:
     - field.field.commerce_product_variation.frame.field_generic_size
     - field.field.commerce_product_variation.frame.field_images
     - image.style.max_325x325
-    - responsive_image.styles.narrow
   module:
     - blazy
 id: commerce_product_variation.frame.inicio
@@ -27,10 +26,10 @@ content:
     label: hidden
     settings:
       image_style: max_325x325
-      responsive_image_style: narrow
+      responsive_image_style: ''
       media_switch: ''
       thumbnail_style: max_325x325
-      ratio: fluid
+      ratio: ''
       current_view_mode: inicio
       background: false
       caption:

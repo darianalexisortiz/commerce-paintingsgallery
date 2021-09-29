@@ -79,6 +79,7 @@ module:
   libraries: 0
   link: 0
   link_attributes: 0
+  lite_speed_cache: 0
   locale: 0
   mail_login: 0
   mailsystem: 0
@@ -93,7 +94,6 @@ module:
   path_alias: 0
   plugin: 0
   profile: 0
-  quickedit: 0
   rdf: 0
   recaptcha_v3: 0
   responsive_image: 0

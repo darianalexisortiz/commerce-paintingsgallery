@@ -1,6 +1,6 @@
 uuid: cbf19b39-59ba-4101-8892-f4e370f7be3f
 langcode: es
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.denominacion

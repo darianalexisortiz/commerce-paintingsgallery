@@ -6,6 +6,7 @@ dependencies:
     - search_api.index.products
   module:
     - blazy
+    - commerce_product
     - search_api
 _core:
   default_config_hash: QVuW4guWj_IOqJGxjlEvvaYoU5gKw7PZuvTXcTMGvwc
@@ -47,7 +48,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 50
+          items_per_page: 30
           offset: 0
           id: 0
           total_pages: null
@@ -204,17 +205,17 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts:
-        created_1:
-          id: created_1
+        title_1:
+          id: title_1
           table: search_api_index_products
-          field: created
+          field: title_1
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
-          exposed: false
+          order: DESC
+          exposed: true
           expose:
-            label: ''
+            label: Título
           plugin_id: search_api
         search_api_relevance:
           id: search_api_relevance
@@ -228,18 +229,6 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-        title_1:
-          id: title_1
-          table: search_api_index_products
-          field: title_1
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: Título
-          plugin_id: search_api
         created:
           id: created
           table: search_api_index_products
@@ -247,7 +236,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: true
           expose:
             label: Fecha
@@ -256,10 +245,21 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        variations:
+          id: variations
+          table: search_api_datasource_products_entity_commerce_product
+          field: variations
+          relationship: none
+          group_type: group
+          admin_label: 'Variaciones: Variación de producto'
+          required: false
+          skip_access: false
+          entity_type: commerce_product
+          plugin_id: search_api
       arguments: {  }
       display_extenders: {  }
-      use_ajax: true
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:

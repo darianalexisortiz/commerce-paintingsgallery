@@ -1,6 +1,6 @@
 uuid: 2fbb37ca-d5bf-491e-9b53-167ca6aa5f80
 langcode: es
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.marco

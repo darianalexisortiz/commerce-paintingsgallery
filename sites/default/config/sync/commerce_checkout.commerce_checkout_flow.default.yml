@@ -13,6 +13,7 @@ label: General
 plugin: multistep_default
 configuration:
   display_checkout_progress: true
+  display_checkout_progress_breadcrumb_links: false
   panes:
     login:
       allow_guest_checkout: true
@@ -23,29 +24,29 @@ configuration:
       double_entry: true
       step: order_information
       weight: 1
+    payment_information:
+      step: order_information
+      weight: 2
     review:
       step: review
       weight: 3
+    payment_process:
+      capture: true
+      step: _disabled
+      weight: 7
     completion_message:
       message:
         value: 'Su número de pedido es [commerce_order:order_number]. Puede ver su pedido en la página de su cuenta cuando inicie sesión.'
         format: plain_text
       step: complete
+      weight: 4
+    completion_register:
+      step: complete
       weight: 5
     order_summary:
       view: null
       step: _sidebar
-      weight: 7
-    completion_register:
-      step: complete
       weight: 6
-    payment_process:
-      capture: true
-      step: payment
-      weight: 4
-    payment_information:
-      step: order_information
-      weight: 2
     coupon_redemption:
       allow_multiple: false
       step: _disabled

@@ -1,0 +1,25 @@
+uuid: 01c16472-6550-4786-af7a-ad353e57a64a
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fefb2f91-c11d-4d2b-b949-553c43800d75'
+  module:
+    - block_content
+  theme:
+    - mavacuadros
+id: csstemporal
+theme: mavacuadros
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:fefb2f91-c11d-4d2b-b949-553c43800d75'
+settings:
+  id: 'block_content:fefb2f91-c11d-4d2b-b949-553c43800d75'
+  label: 'CSS temporal'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

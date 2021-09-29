@@ -33,7 +33,7 @@ processor: 'entity:commerce_product_variation'
 processor_configuration:
   langcode: es
   update_existing: 2
-  update_non_existent: _delete
+  update_non_existent: _keep
   expire: -1
   owner_feed_author: false
   owner_id: 71

@@ -11,11 +11,9 @@ dependencies:
     - field.field.commerce_product_variation.frame.field_generic_size
     - field.field.commerce_product_variation.frame.field_images
     - image.style.max_650x650
-    - image.style.thumbnail
-    - responsive_image.styles.narrow
   module:
-    - blazy
     - commerce_order
+    - image
 id: commerce_product_variation.frame.default
 targetEntityType: commerce_product_variation
 bundle: frame
@@ -23,7 +21,7 @@ mode: default
 content:
   attribute_framework:
     type: entity_reference_label
-    weight: 3
+    weight: 2
     region: content
     label: inline
     settings:
@@ -31,7 +29,7 @@ content:
     third_party_settings: {  }
   attribute_size:
     type: entity_reference_label
-    weight: 5
+    weight: 4
     region: content
     label: inline
     settings:
@@ -39,7 +37,7 @@ content:
     third_party_settings: {  }
   field_frame_denomination:
     type: entity_reference_label
-    weight: 4
+    weight: 3
     region: content
     label: inline
     settings:
@@ -47,46 +45,20 @@ content:
     third_party_settings: {  }
   field_generic_size:
     type: entity_reference_label
-    weight: 6
+    weight: 5
     region: content
     label: inline
     settings:
       link: false
     third_party_settings: {  }
   field_images:
-    type: blazy
+    type: image
     weight: 0
     region: content
     label: hidden
     settings:
       image_style: max_650x650
-      responsive_image_style: narrow
-      media_switch: ''
-      background: true
-      thumbnail_style: thumbnail
-      ratio: '1:1'
-      current_view_mode: default
-      caption:
-        title: '0'
-        alt: '0'
-      icon: ''
-      layout: ''
-      view_mode: ''
-      cache: 0
-      skin: ''
-      fx: ''
-      style: ''
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      box_style: ''
-      _uri: ''
-      breakpoints: {  }
-      sizes: ''
-      grid_header: ''
-      grid: 0
-      grid_medium: 0
-      grid_small: 0
+      image_link: ''
     third_party_settings: {  }
   price:
     label: hidden
@@ -101,18 +73,11 @@ content:
         promotion: '0'
         tax: '0'
     third_party_settings: {  }
-  sku:
-    type: string
-    weight: 2
-    region: content
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
 hidden:
   feeds_item: true
   langcode: true
   list_price: true
   product_id: true
   search_api_excerpt: true
+  sku: true
   title: true

@@ -11,9 +11,8 @@ dependencies:
     - field.field.commerce_product_variation.frame.field_frame_denomination
     - field.field.commerce_product_variation.frame.field_generic_size
     - field.field.commerce_product_variation.frame.field_images
-    - image.style.large
+    - image.style.max_650x650
     - image.style.thumbnail
-    - responsive_image.styles.wide
   module:
     - blazy
     - commerce_order
@@ -28,11 +27,11 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: large
-      responsive_image_style: wide
+      image_style: max_650x650
+      responsive_image_style: ''
       media_switch: ''
       thumbnail_style: thumbnail
-      ratio: fluid
+      ratio: ''
       current_view_mode: catalog
       background: false
       caption:

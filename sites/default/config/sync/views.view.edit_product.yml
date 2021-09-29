@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.commerce_product.field_frame_category
     - field.storage.commerce_product.field_product_category
-    - field.storage.commerce_product_variation.attribute_framework
     - field.storage.commerce_product_variation.attribute_size
     - field.storage.commerce_product_variation.field_frame_denomination
     - field.storage.commerce_product_variation.field_generic_size
@@ -17,18 +16,11 @@ dependencies:
     - taxonomy.vocabulary.product_category
     - user.role.administrator
     - user.role.editor
-  content:
-    - 'taxonomy_term:product_category:84548d29-8fb4-4ead-8d90-102c9631cae8'
   module:
-    - commerce_price
     - commerce_product
-    - csv_serialization
     - image
-    - rest
-    - serialization
     - taxonomy
     - user
-    - views_data_export
     - views_linkarea
 _core:
   default_config_hash: tu0PL5GIB4nIjUfFst2N0WsTO6Ju1WtX7lFr-ya9vAs
@@ -76,10 +68,15 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 50
+          items_per_page: 25
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: '‹ previous'
+            next: 'next ›'
+            first: '« first'
+            last: 'last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -88,11 +85,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
           quantity: 9
       style:
         type: table

@@ -13,7 +13,7 @@ dependencies:
     - field.field.commerce_product_variation.frame.field_images
     - image.style.thumbnail
   module:
-    - image
+    - blazy
 id: commerce_product_variation.frame.order_item
 targetEntityType: commerce_product_variation
 bundle: frame
@@ -52,13 +52,39 @@ content:
       link: false
     third_party_settings: {  }
   field_images:
-    type: image
+    type: blazy
     weight: 1
     region: content
     label: hidden
     settings:
       image_style: thumbnail
-      image_link: file
+      responsive_image_style: ''
+      media_switch: ''
+      thumbnail_style: thumbnail
+      ratio: ''
+      current_view_mode: order_item
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      skin: ''
+      fx: ''
+      style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      box_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: 0
+      grid_medium: 0
+      grid_small: 0
     third_party_settings: {  }
   sku:
     type: string

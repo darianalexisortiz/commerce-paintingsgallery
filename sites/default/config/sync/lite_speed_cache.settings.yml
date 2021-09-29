@@ -1,0 +1,9 @@
+lite_speed_cache:
+  esi_on: 'On'
+  max_age: '28800'
+  max_age_private: '3600'
+  cache_status: '0'
+  debug: '1'
+_core:
+  default_config_hash: pdXC_2PGhwmbOzH25GoNLLBQgP6YnlxqY1ExQE7cp8k
+langcode: es

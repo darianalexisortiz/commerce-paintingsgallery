@@ -23,6 +23,6 @@ numberPattern: null
 refresh_mode: customer
 refresh_frequency: 300
 sendReceipt: true
-receiptBcc: ''
+receiptBcc: info@mavacuadros.com.ar
 traits: {  }
 locked: false
